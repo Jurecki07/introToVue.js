@@ -1,0 +1,113 @@
+
+
+INTRODUCTION TO VUE
+Front-End Frameworks
+Welcome to Introduction to Vue! In this lesson, we will cover some of the most exciting features of Vue, discuss how they have changed the world of web development,
+and see why Vue has become the popular front-end framework that it is today.
+
+Before all of that, though, there is one preliminary question we're excited to answer. Perhaps you have heard Vue referred to as a "front-end framework."
+But what is a front-end framework? And, for that matter, what is a front-end? Well, we've prepared a video to answer these important questions once and for all!
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Adding Vue
+We hope you found our video insightful! In summary, front-end frameworks aim to fix the following issues in front-end web development:
+
+Long development times
+Difficult bug fixes and updates
+Slow page rendering
+In this lesson, we will be introducing some of the features that allow Vue to tackle these issues.
+This lesson will give you a taste for programming in Vue. Everything covered will be covered in more depth in later lessons,
+so don't worry if you don't feel like you're absorbing it all right away!
+
+The first thing you'll need to do to begin using any front-end framework is to add the framework to your project.
+You can import Vue by adding a script tag inside the head of your project's HTML file:
+
+script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer>script
+Above we load the current version of Vue, hosted by the Vue team, directly into your project.
+We use the defer attribute on the script tag to make sure that the page is loaded and ready to hook up to Vue before we actually load Vue.
+
+    Even at this preliminary step, the Vue team has found ways to shorten your development time.
+Many front-end frameworks, like React and Angular, have difficult setup processes that can make starting a project a hassle.
+The Vue team recognized that many complex front-end features aren't useful until late in the front-end learning journey (or sometimes at all). As a result, they offered this simple alternative that provides most of Vue's features to developers quickly and easily.
+
+    Note: This lesson will be using cutting edge browser features. If you are experiencing technical issues at any point during the lesson,
+we suggest you download and use the most up-to-date version of Google Chrome to potentially fix these issues.
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+INTRODUCTION TO VUE
+Creating Vue Apps
+Our project now has access to the Vue library. This gives us access to all of the code that will allow us to make Vue apps, web front-ends built using Vue, but doesn't actually create one for us. We now need to write the code to actually make a Vue app.
+
+Vue makes it easy to make a new app by exporting a class called Vue. Much like any other JavaScript class, we create instances of this class using the new keyword. Each of these Vue instances is a fully-functioning Vue app. Let's look at an example:
+
+// app.js
+const app = new Vue({});
+By invoking the Vue class constructor with the new keyword, we create a new instance of the Vue class which we name app.
+The Vue constructor can set many properties on our Vue app when it is called. However, unlike many constructors,
+the Vue class does not take each of these properties as separate arguments. Rather, it only takes one argument.
+
+Vue apps require a lot of information — information that will differ greatly from app to app. To accommodate this,
+the Vue constructor doesn't attempt to take in each piece of information as its own parameter. This would require developers to keep careful track of which order arguments were expected in,
+making it difficult to add properties or make changes.
+
+Instead, the Vue constructor takes in only one object, called the options object. Each piece of information the Vue app needs to function
+is added to the options object as a key-value pair. This means that developers can easily update or add information in the Vue app by just looking for the correct key in the options object.
+
+We will see this in practice in the following exercises as we add information to our options object.
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+el
+In making a new Vue app, we gain access to all of the powerful features Vue has to offer. However, we don't necessarily want all of our HTML to have access to these features. We need to specify to our Vue app which portion of our HTML we want to gain access to our Vue app's logic.
+
+We do this by adding a key-value pair to the Vue app's options object. We add a key called el, standing for HTML element, with a value of a CSS selector as a string that will target an element in our HTML and give it access to our Vue app's functionality.
+
+// app.js
+const app = new Vue({
+el: '#app'
+});
+In the above example, we wanted an HTML element with an ID of app to gain access to our Vue app's functionality.
+We added an el key to the options object and made the value '#app', a CSS selector that will target an element with an ID, #, of app.
+
+<!-- index.html -->
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+<div id="app">
+    <!-- Vue App HTML Code -->
+</div>
+</body>
+In this example, we wrote the HTML that will be turned into a Vue app. Then, in the <head> we imported the file containing the JavaScript from the previous example that will turn the HTML #app <div> element into a Vue app.
+
+    Note: We must import our Vue app code after the <script> that loads Vue.js. Otherwise, we would not yet have access to the Vue library in app.js, making it impossible to create a Vue app. This is also why we add defer to both elements — to ensure Vue has fully loaded when we go to make our Vue app.
+
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    INTRODUCTION TO VUE
+    Data
+    Now that we've transformed our HTML into a Vue app, we're ready to make the magic happen!
+
+        An essential feature all front-end frameworks must accomplish is rendering and updating dynamic data. Information like the number of likes on a social media post may change at any second. Front-end frameworks must make it easy to display these types of dynamic data and automatically update them for users as soon as they change.
+
+        To display dynamic information we need:
+
+        A place to store the data we will be displaying
+    A syntax for displaying that information
+    Let's tackle the first point.
+
+    As mentioned in the last exercise, everything our Vue app needs should be provided on the options object when the Vue app is created. Therefore, all of our dynamic data will need to be specified in our options object at a property called data.
+
+        const app = new Vue({
+        el: '#app',
+        data: {
+            username: 'Michael'
+        }
+    });
+    In this example, we added the data property to our options object. Apps need to display many pieces of dynamic data. To accommodate this, the value of .data is an object as well. Every piece of data will be added to the .data object as a key-value pair. In this case, we only added one piece of data called username with a value of 'Michael'.
+
+        Note: In most apps, your code would likely get this data from a database (to find out what the user's actual name is), but for this lesson, we will hard-code some of our starting data for simplicity.
