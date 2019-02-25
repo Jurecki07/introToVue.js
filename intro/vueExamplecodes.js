@@ -14,7 +14,28 @@ const app = new Vue({
 const app = new Vue({
     el: '#app',
     data: {
-        username: 'Michael'
+        username: 'CoderInTraining',
+        newTweet: '',
+        tweets: [
+            'Started learning to code today. Wish me luck!',
+            'Okay, I learned HTML, CSS, and JavaScript. But, how do I combine them together?? Send help.',
+            'Today I start learning Vue. I got this.'
+        ]
     }
 });
 
+// Directives kinda like an if statement. Will only display the element if the statement returns true
+
+<button v-if="userIsLoggedIn">Log Out</button>
+<button v-if="!userIsLoggedIn">Log In</button>
+
+// This will iterate through every item and create a varaible called todo
+
+<ul>
+<li v-for="todo in todoList">{{ todo }}</li>
+</ul>
+
+// v-model can be added to any form field and hooked up to our app which is data
+    // this will display the current value of username even if it is modified
+
+<input v-model="username" />

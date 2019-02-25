@@ -1,5 +1,3 @@
-
-
 INTRODUCTION TO VUE
 Front-End Frameworks
 Welcome to Introduction to Vue! In this lesson, we will cover some of the most exciting features of Vue, discuss how they have changed the world of web development,
@@ -111,3 +109,70 @@ In this example, we wrote the HTML that will be turned into a Vue app. Then, in 
     In this example, we added the data property to our options object. Apps need to display many pieces of dynamic data. To accommodate this, the value of .data is an object as well. Every piece of data will be added to the .data object as a key-value pair. In this case, we only added one piece of data called username with a value of 'Michael'.
 
         Note: In most apps, your code would likely get this data from a database (to find out what the user's actual name is), but for this lesson, we will hard-code some of our starting data for simplicity.
+
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    INTRODUCTION TO VUE
+    Templates
+    As a reminder, we need the following tools to display dynamic information in our Vue app:
+
+        A place to store the data we will be displaying
+    A syntax for displaying that information
+    We now know that we store our dynamic information on the .data attribute of our Vue app options object, but how do we display that information if it potentially will keep changing values?
+
+        Vue makes use of templating meaning that the developer specifies certain content in our HTML isn't meant to be displayed literally but rather substituted out with the appropriate data from the app. We specify which content inside our HTML should be substituted by surrounding it in two layers of curly brackets, like so:
+
+    <div id="app">
+        <h2>Hello, {{ username }}</h2>
+    </div>
+    In this example, {{ username }} will be filled in with the value of username from the Vue app's .data object when the page is rendered to the user. If the value of username changes, the value displayed to the user will be changed as well.
+
+    This type of HTML code, where dynamic data is stubbed out, is called a template. Templates contain all of the hard-coded information displayed on the site but specify places where dynamic information needs to be filled in.
+
+    Using curly brackets for templating in HTML was popularized by a framework called mustache. As a result, curly braces in templates are often called "mustaches." Whenever you want to display information from the Vue app's data, you wrap the name of the .data property in two sets of mustaches (curly brackets) and the expression will be replaced with the Vue data information for the end user to see.
+
+    This is far easier to read and write than trying to write vanilla JavaScript that selects specific HTML elements and updates their content dynamically. Using the .data attribute and mustache templates is yet another way Vue makes front-end web development faster to write, easier to read, and less error-prone.
+
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    INTRODUCTION TO VUE
+    Directives
+    Let's check out one of Vue's coolest features: directives.
+
+        Directives are custom HTML attributes built into Vue that accomplish incredibly complex, common front-end operations using barely any code.
+
+        For example, one very common front-end need is to conditionally display elements. Let's say we only want to show a login button if a user isn't already logged in. We can add a v-if directive as an attribute to HTML elements like so:
+
+        <button v-if="userIsLoggedIn">Log Out</button>
+    <button v-if="!userIsLoggedIn">Log In</button>
+    v-if acts an awful lot like JavaScript if - it will only display the HTML element it is on if the v-if statement returns true. In this case, it will check our .data for a value of userIsLoggedIn. Then it will only display our "Log Out" button if userIsLoggedIn is true and will only display our "Log In" button if it is false.
+
+        Another complex, common front-end need is to render an array of items identically. We can use v-for as an attribute, like so:
+
+        <ul>
+    <li v-for="todo in todoList">{{ todo }}</li>
+    </ul>
+    Bam, just like that v-for will iterate through every item in our .data's todoList array, create a variable called todo containing each succesive array element, and create an li displaying each element in the list. Even if a new item is added to the list, the list will be re-rendered instantly to display that new item.
+
+    One more super cool directive is v-model. v-model can be added to any form field and hooked up to our Vue app's data. Modifying the form field will then automatically modify the specified Vue app data!
+
+    <input v-model="username" />
+        The above input field will display the current value of username on the Vue app's data object and will change the value of username if the user modifies the value in the field. That's some complicated JavaScript implemented perfectly with very little code.
+
+        As you may have noticed, every built-in Vue directive starts with v-. There are too many for us to cover in this lesson, however you can view a list of them all here. Just know that if there isn't a directive that does what you need — you can even make your own!
+
+    Directives make complex front-end code easy to write, easy to read, and optimized for great site performance.
+
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    INTRODUCTION TO VUE
+    Components
+    It is incredibly common to re-use complex elements throughout a front-end web app. For example, every post on Instagram or Facebook needs to look the same but contain different information. Additionally, they need to look the same on many different pages within the site and on many different devices. To make this easier, Vue has added the ability to create custom, reusable HTML elements called components.
+
+        When creating a component, you provide a template that should be rendered whenever the component is used in HTML. You then specify which pieces of dynamic information, called props, the component can receive to fill in this template. When used in your HTML code, props look like normal HTML attributes, you add them to the opening tag of the component HTML element with a name and a value.
+
+        Once you've created your component, you can then use it throughout your site just like any other HTML element. This means no copy/pasting of HTML code, no need to make the same change in multiple places across your site, and no potentially broken or misstyled elements.
+
+    Knowing how and when to make components is a slightly more advanced topic, so we won't cover it in depth. However, that doesn't mean we can't play around with them right now. Let's check one out!
+    
+    

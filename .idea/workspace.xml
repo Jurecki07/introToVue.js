@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a91b785-c61f-45c2-86af-315b6b98b2d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/intro/firstVueSite/introHTMLSite.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/intro/introLessonsBefore.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/intro/vueExamplecodes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/CA Web dev.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
@@ -84,9 +81,8 @@
       <change beforePath="$PROJECT_DIR$/../projects/toDoList/js/helpers.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../projects/toDoList/js/stores.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../projects/toDoList/server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro/introLessons.html" beforeDir="false" afterPath="$PROJECT_DIR$/intro/firstVueSite/firstsite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro/introLessonsBefore.html" beforeDir="false" afterPath="$PROJECT_DIR$/intro/introLessonsBefore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro/vueExamplecodes.js" beforeDir="false" afterPath="$PROJECT_DIR$/intro/vueExamplecodes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -102,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/intro/introLessonsBefore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1441">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="974">
+              <caret line="177" column="199" selection-start-line="177" selection-start-column="199" selection-end-line="177" selection-end-column="199" />
             </state>
           </provider>
         </entry>
@@ -111,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intro/vueExamplecodes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="874">
+              <caret line="38" column="77" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -142,15 +138,15 @@
         <option value="$PROJECT_DIR$/intro/intro.vue" />
         <option value="$PROJECT_DIR$/intro/firstVueSite/firstsite.js" />
         <option value="$PROJECT_DIR$/intro/introLessons.html" />
-        <option value="$PROJECT_DIR$/intro/introLessonsBefore.html" />
-        <option value="$PROJECT_DIR$/intro/vueExamplecodes.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
+        <option value="$PROJECT_DIR$/intro/vueExamplecodes.js" />
+        <option value="$PROJECT_DIR$/intro/introLessonsBefore.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1425" />
-    <option name="y" value="110" />
+    <option name="x" value="1358" />
+    <option name="y" value="36" />
     <option name="width" value="2022" />
     <option name="height" value="1346" />
   </component>
@@ -192,6 +188,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -223,18 +220,18 @@
       <option name="presentableId" value="Default" />
       <updated>1551115098476</updated>
       <workItem from="1551115099676" duration="546000" />
-      <workItem from="1551115668205" duration="1221000" />
+      <workItem from="1551115668205" duration="3241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1767000" />
+    <option name="totallyTimeSpent" value="3787000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1425" y="110" width="2022" height="1346" extended-state="0" />
+    <frame x="1358" y="36" width="2022" height="1346" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08770161" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08770161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -277,13 +274,6 @@
     <entry file="file://$PROJECT_DIR$/intro/firstVueSite/firstsite.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/intro/vueExamplecodes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -291,10 +281,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/intro/vueExamplecodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" column="77" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/intro/introLessonsBefore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1441">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="974">
+          <caret line="177" column="199" selection-start-line="177" selection-start-column="199" selection-end-line="177" selection-end-column="199" />
         </state>
       </provider>
     </entry>
